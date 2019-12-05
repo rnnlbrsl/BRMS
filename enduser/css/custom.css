@@ -1,0 +1,42 @@
+.navbar .navbar-collapse {
+	text-align: center;
+}
+
+.carousel{
+	background-color: blue;
+}
+
+div{
+	padding: 10px 10px;
+}
+
+
+/* CSS for Login */
+/*
+.form-container
+{
+	width: 600px;
+	margin: auto auto;
+}
+.form-input
+{
+	width: 500px;
+	margin: auto auto;
+	text-align: center;
+}
+.img-container
+{
+	text-align: center;
+}
+.img-container img
+{
+	width: 400px;
+	opacity: .8;
+	background-color: red;
+}
+.container
+{
+	height: 650px;
+}
+*/
+
