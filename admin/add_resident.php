@@ -109,21 +109,21 @@
                  }
                 ?>
 		<div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Information System | Add Resident</div>
+            <div class="panel-heading">BRMS | Add Resident</div>
         <div class="panel-body">
             <form method="post" action="add_resident.php" enctype="multipart/form-data">
         <div class="row form-group">
           <div class="col-lg-4">
             <label>Last Name</label>
-              <input type="text" class="form-control" name="lastname" pattern="[A-Za-z]{3,}" required>
+              <input type="text" class="form-control" name="lastname" pattern="[A-Za-z ]{3,}" required>
             </div>  
              <div class="col-lg-4">
             <label>First Name</label>
-              <input type="text" class="form-control" name="firstname" pattern="[A-Za-z]{3,}" required>
+              <input type="text" class="form-control" name="firstname" pattern="[A-Za-z ]{3,}" required>
             </div>
             <div class="col-lg-4">
             <label>Middle Name</label>
-              <input type="text" class="form-control" name="middlename" pattern="[A-Za-z]{3,}" required>
+              <input type="text" class="form-control" name="middlename" pattern="[A-Za-z ]{3,}" required>
             </div>  
         </div>
             <div class="row form-group">
@@ -166,7 +166,7 @@
                 <div class="line"></div>
                 <footer>
             <p class="text-center">
-            Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company  
+            Barangay Records Management System &copy;<?php echo date(" Y ");?> Ronnel Brosola  
             </p>
             </footer>
             </div>

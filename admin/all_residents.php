@@ -8,6 +8,7 @@ if (!isset($_SESSION["usertype"]))
         header("Location:../access-denied.php");
     }
 }
+
 $page = 'residents';
 $menu = 'all_residents';
 
@@ -88,7 +89,7 @@ elseif(isset($_POST['Update']))
       <div class="line"></div>
       
       <div class="panel panel-default sammacmedia">
-        <div class="panel-heading"><strong>Bued Information System | All Residents</strong></div>
+        <div class="panel-heading"><strong>BRMS | All Residents</strong></div>
         <div class="panel-body">
           <table class="table table-striped thead-dark table-bordered table-hover" id="myTable">
             <thead>
@@ -159,7 +160,7 @@ elseif(isset($_POST['Update']))
           <div class="line"></div>
           <footer>
             <p class="text-center">
-              Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company  
+              Barangay Records Management System &copy;<?php echo date(" Y ");?> | Ronnel Brosola 
             </p>
           </footer>
         </div>

@@ -61,7 +61,7 @@ i, span {
     min-width: 250px;
     max-width: 250px;
     background: green;
-    color: #fff;
+    color: #000000;
     transition: all 0.3s;
 }
 

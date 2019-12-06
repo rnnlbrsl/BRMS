@@ -2,9 +2,10 @@
 <?php if (!isset($menu)):
     $menu = '';
 endif ?>
+
 <nav id="sidebar" class="sammacmedia">
     <div class="sidebar-header">
-        <h3>Bued Information System</h3>
+        <h3>Barangay Records Management System</h3>
     </div>
     <ul class="list-unstyled components">
         <li class="<?php echo ($page == 'dashboard') ? 'active' : '' ?>">

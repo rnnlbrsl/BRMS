@@ -1,1 +1,1 @@
-<?php $mysqli = new mysqli('localhost','root','','buedinfosys'); ?>
+<?php $mysqli = new mysqli('localhost','root','','db-brms'); ?>

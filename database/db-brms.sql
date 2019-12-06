@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2018 at 06:36 PM
+-- Generation Time: Dec 06, 2019 at 11:00 PM
 -- Server version: 10.1.30-MariaDB
--- PHP Version: 5.6.33
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `buedinfosys`
+-- Database: `db-brms`
 --
 
 -- --------------------------------------------------------
@@ -77,6 +77,7 @@ CREATE TABLE `business_permit` (
   `business_permit_no` int(11) NOT NULL,
   `resident_no` int(11) NOT NULL,
   `business_name` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
   `date_issued` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -99,9 +100,9 @@ CREATE TABLE `cases` (
 --
 
 INSERT INTO `cases` (`id`, `employee_id`, `severity`, `notes`, `case_num`) VALUES
-(1, '1029482', 'Critical', '<p>stole company property</p>', '201809111431489832'),
-(2, '1029482', 'Critical', '<p>stole company property</p>', '20180911143244.2511'),
-(3, '1029482', 'Critical', '<p>stole company property</p>', '20180911143429.2461');
+(2, '1029482', 'Critical', '<p>stole company property</p>', '201809111431489832'),
+(3, '1029482', 'Critical', '<p>stole company property</p>', '20180911143244.2511'),
+(4, '1029482', 'Critical', '<p>stole company property</p>', '20180911143429.2461');
 
 -- --------------------------------------------------------
 
@@ -119,32 +120,6 @@ CREATE TABLE `cert_of_indigency` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employees`
---
-
-CREATE TABLE `employees` (
-  `id` int(11) NOT NULL,
-  `employee_id` varchar(30) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `surname` varchar(30) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `gender` varchar(2) NOT NULL,
-  `joined` varchar(30) NOT NULL,
-  `tmp` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `employees`
---
-
-INSERT INTO `employees` (`id`, `employee_id`, `name`, `surname`, `phone`, `email`, `gender`, `joined`, `tmp`) VALUES
-(1, '9246612', 'Crisanta', 'Valerio', '263773123123', 'crisanta@valerio.com', 'F', ' 30 Sep 2018 ', '168'),
-(2, '8718445', 'Elaiza', 'Escano', '263773135123', 'elaiz@escano.com', 'F', ' 30 Sep 2018 ', '2416');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `minor_brgy_clearance`
 --
 
@@ -152,8 +127,7 @@ CREATE TABLE `minor_brgy_clearance` (
   `minor_clearance_no` int(11) NOT NULL,
   `resident_no` int(11) NOT NULL,
   `purpose` varchar(255) NOT NULL,
-  `issued_at` date NOT NULL,
-  `date_issued` date NOT NULL
+  `issued_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -202,6 +176,35 @@ CREATE TABLE `picture` (
 -- Dumping data for table `picture`
 --
 
+INSERT INTO `picture` (`id`, `tmp`, `name`) VALUES
+(2, 'user', 'user.jpeg'),
+(3, '168', 'user168.jpg'),
+(4, '742', 'user742.jpg'),
+(5, '1672', 'user1672.jpg'),
+(6, '1672', 'user1672.jpg'),
+(7, '168', 'user168.jpg'),
+(8, '2416', 'user2416.jpg'),
+(9, '8516', 'user8516.jpg'),
+(10, '2797', 'user2797.jpg'),
+(11, '4151', 'user4151.jpg'),
+(12, '6675', 'user6675.png'),
+(13, 'user4151', 'user.jpeg'),
+(14, '7861', 'user7861.jpeg'),
+(15, '8839', 'user8839.jpeg'),
+(16, '5931', 'user5931.jpeg'),
+(17, '4208', 'user4208.jpeg'),
+(18, '20', 'user20.jpeg'),
+(19, '9445', 'user9445.jpeg'),
+(20, '9184', 'user9184.jpeg'),
+(21, '8520', 'user8520.jpeg'),
+(22, '5293', 'user5293.jpeg'),
+(23, '4859', 'user4859.jpeg'),
+(24, '9180', 'user9180.jpg'),
+(25, '211', 'user211.jpg'),
+(26, '9943', 'user9943.jpg'),
+(27, '9496', 'user9496.jpg'),
+(28, '9827', 'user9827.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -224,6 +227,11 @@ CREATE TABLE `residents` (
 --
 -- Dumping data for table `residents`
 --
+
+INSERT INTO `residents` (`id`, `lastname`, `firstname`, `middlename`, `birthdate`, `age`, `address`, `sex`, `date_registered`, `tmp`) VALUES
+(1, 'Brosola', 'Rian Jed', 'Valdez', '2012-03-05', 7, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 06 Dec 2019 ', ''),
+(2, 'Brosola', 'Ronnel', 'Valdez', '1992-12-24', 27, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 06 Dec 2019 ', ''),
+(3, 'Brosola', 'Rio Amor', 'Valdez', '1994-04-09', 25, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'F', ' 06 Dec 2019 ', '');
 
 -- --------------------------------------------------------
 
@@ -263,7 +271,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `username`, `password`, `joined`, `type`, `permission`, `gender`, `phone`) VALUES
-(1, 'admin', 'admin', 'admin@admin.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', ' 30 Sep 2018 ', 'user', '1', 'M', '263773413123');
+(2, 'Ronnel', 'Brosola', 'ronnel.brosola@gmail.com', 'ronnel', 'c77c8ed22d2eb97676981ceea1f6d9d9', ' 06 Dec 2019 ', 'admin', '1', 'M', '09271908082');
 
 --
 -- Indexes for dumped tables
@@ -304,12 +312,6 @@ ALTER TABLE `cases`
 --
 ALTER TABLE `cert_of_indigency`
   ADD PRIMARY KEY (`indigency_cert_no`);
-
---
--- Indexes for table `employees`
---
-ALTER TABLE `employees`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `minor_brgy_clearance`
@@ -385,19 +387,13 @@ ALTER TABLE `business_permit`
 -- AUTO_INCREMENT for table `cases`
 --
 ALTER TABLE `cases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cert_of_indigency`
 --
 ALTER TABLE `cert_of_indigency`
   MODIFY `indigency_cert_no` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `employees`
---
-ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `minor_brgy_clearance`
@@ -415,13 +411,13 @@ ALTER TABLE `ordinances`
 -- AUTO_INCREMENT for table `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `residents`
 --
 ALTER TABLE `residents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `resolutions`
@@ -433,7 +429,7 @@ ALTER TABLE `resolutions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
