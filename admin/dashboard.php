@@ -85,7 +85,7 @@ $page = 'dashboard';
                 <div class="line"></div>
                 <footer>
             <p class="text-center">
-            Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company    
+            Barangay Records Management System &copy;<?php echo date(" Y ");?>    
             </p>
             </footer>
             </div>

@@ -46,7 +46,7 @@ require_once('includes/conn.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bued Information System | LOGIN</title>
+<title>BRMS | Login</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -71,15 +71,15 @@ require_once('includes/conn.php');
 <!--===============================================================================================-->
 </head>
 <body>
-<div class="container-login100">
+<div class="container-login100" style="background-image: url('enduser/img/bg.jpg'););">
 	<div class="row">
 		<div class="col-lg-6">
 			
 		</div>
-		<div class="col-lg-6" style="background-image: url('enduser/img/1.png');">
+		<div class="col-lg-6">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
 				<form class="login100-form validate-form" method="post" action="login.php">
-					<span class="login100-form-title p-b-37">Bued Information System Login</span>
+					<span class="login100-form-title p-b-37">BRMS Login</span>
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username ">
 						<input class="input100" type="text" name="username" placeholder="username " required="">
 						<span class="focus-input100"></span>
