@@ -16,7 +16,7 @@ $menu = 'add_officials';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Bued Info. System | Add Ordinance</title>
+  <title>BRMS | Add Ordinance</title>
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -110,7 +110,7 @@ $menu = 'add_officials';
         }
         ?>
         <div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Information System | Add an Official</div>
+            <div class="panel-heading">BRMS | Add an Official</div>
             <div class="panel-body">
                 <form method="post" action="add_officials.php" enctype="multipart/form-data">
                     <div class="row form-group">

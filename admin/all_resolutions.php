@@ -45,7 +45,7 @@ elseif(isset($_POST['Update']))
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Bued Information System | All Resolutions</title>
+        <title>BRMS | All Resolutions</title>
 
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">

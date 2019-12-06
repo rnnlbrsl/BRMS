@@ -46,7 +46,7 @@ if (isset($_POST['submit']))
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Bued Info. System | Add Users</title>
+  <title>BRMS | Add Users</title>
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">

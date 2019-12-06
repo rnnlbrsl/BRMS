@@ -45,7 +45,7 @@ elseif(isset($_POST['Update']))
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Bued Information System | All Blotter Records</title>
+        <title>BRMS | All Blotter Records</title>
 
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -76,7 +76,7 @@ elseif(isset($_POST['Update']))
                 </nav>
                 <div class="line"></div>
 		<div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Info. System All Blotter Records</div>
+            <div class="panel-heading">BRMS | All Blotter Records</div>
         <div class="panel-body">
                         <table class="table table-striped thead-dark table-bordered table-hover" id="myTable">
                 <thead>

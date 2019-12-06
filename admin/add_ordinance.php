@@ -16,7 +16,7 @@ $menu = 'add_ordinances';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Bued Info. System | Add Ordinance</title>
+  <title>BRMS | Add Ordinance</title>
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">

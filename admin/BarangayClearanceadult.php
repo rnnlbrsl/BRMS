@@ -27,7 +27,7 @@
             <p id="lh" style="text-align: center;"> Republic of the Philippines </p>
             <p id="lh" style="text-align: center;"> Province of Pangasinan </p>
             <p id="lh" style="text-align: center;"> City Of Alaminos</p>
-            <p id="lh" style="text-align: center;"> Barangay BUED</p>
+            <p id="lh" style="text-align: center;"> Barangay </p>
             <br>
             <br>
             <p id="lh" style="text-align: center;"> OFFICE OF THE PUNONG BARANGAY</p>

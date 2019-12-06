@@ -45,7 +45,7 @@ $page = 'dashboard';
                         </div>
                     </div>
                 </nav>
-                <div class="line"></div>
+                <hr>
                 <div class="row">
                 <div class="col-lg-6 col-md-6 ">
                     <div class="panel panel sammac sammacmedia">
@@ -82,7 +82,7 @@ $page = 'dashboard';
                     
                     
             </div>
-                <div class="line"></div>
+                <div class="line"><hr></div>
                 <footer>
             <p class="text-center">
             Barangay Records Management System &copy;<?php echo date(" Y ");?>    
