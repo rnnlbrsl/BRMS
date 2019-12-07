@@ -40,7 +40,7 @@ $page = 'dashboard';
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right samuel">
                                 <li><a href="#"><?php require_once('includes/name.php');?></a></li>
-                                <li ><a href="logout.php"><i class="fa fa-power-off"> Logout</i></a></li>
+                                <li><a href="logout.php"><span>Logout</span></a></li>
                             </ul>
                         </div>
                     </div>
