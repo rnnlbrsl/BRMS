@@ -1,8 +1,9 @@
 <?php require_once('includes/session.php');
       require_once('includes/conn.php');
-      if (!isset($_SESSION["usertype"])) 
+      if (isset($_SESSION["usertype"])) 
 {
-    if ($_SESSION["usertype"] != 1) {
+    if ($_SESSION["usertype"] != 1) 
+    {
         header("Location:../access-denied.php");
     }
 }
