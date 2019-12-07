@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2019 at 11:00 PM
+-- Generation Time: Dec 08, 2019 at 12:09 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -53,6 +53,13 @@ CREATE TABLE `announcement` (
   `date_posted` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`announcement_no`, `official_id`, `title`, `details`, `is_active`, `date_posted`) VALUES
+(1, 0, 'Barangay Fiesta', 'Our Barangay Fiesta will be on December 24. We urge everyone to join and celebrate our fiesta!', 1, ' 06 Dec 2019 ');
+
 -- --------------------------------------------------------
 
 --
@@ -84,29 +91,6 @@ CREATE TABLE `business_permit` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cases`
---
-
-CREATE TABLE `cases` (
-  `id` int(11) NOT NULL,
-  `employee_id` varchar(30) NOT NULL,
-  `severity` varchar(30) NOT NULL,
-  `notes` varchar(200) NOT NULL,
-  `case_num` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cases`
---
-
-INSERT INTO `cases` (`id`, `employee_id`, `severity`, `notes`, `case_num`) VALUES
-(2, '1029482', 'Critical', '<p>stole company property</p>', '201809111431489832'),
-(3, '1029482', 'Critical', '<p>stole company property</p>', '20180911143244.2511'),
-(4, '1029482', 'Critical', '<p>stole company property</p>', '20180911143429.2461');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `cert_of_indigency`
 --
 
@@ -116,6 +100,15 @@ CREATE TABLE `cert_of_indigency` (
   `purpose` varchar(255) NOT NULL,
   `date_issued` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cert_of_indigency`
+--
+
+INSERT INTO `cert_of_indigency` (`indigency_cert_no`, `resident_no`, `purpose`, `date_issued`) VALUES
+(1, 2, 'Wala lang.', '2019-12-07'),
+(2, 2, 'Wala lang.', '2019-12-07'),
+(3, 2, 'Wala Lang.', '2019-12-07');
 
 -- --------------------------------------------------------
 
@@ -146,6 +139,13 @@ CREATE TABLE `officials` (
   `tmp` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `officials`
+--
+
+INSERT INTO `officials` (`official_id`, `resident_no`, `lastname`, `firstname`, `middlename`, `position`, `tmp`) VALUES
+(1, 0, 'Brosola', 'Ronnel', 'Valdez', 'Barangay Captain', 'user3862.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -159,51 +159,6 @@ CREATE TABLE `ordinances` (
   `details` text NOT NULL,
   `date_created` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `picture`
---
-
-CREATE TABLE `picture` (
-  `id` int(11) NOT NULL,
-  `tmp` varchar(90) NOT NULL,
-  `name` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `picture`
---
-
-INSERT INTO `picture` (`id`, `tmp`, `name`) VALUES
-(2, 'user', 'user.jpeg'),
-(3, '168', 'user168.jpg'),
-(4, '742', 'user742.jpg'),
-(5, '1672', 'user1672.jpg'),
-(6, '1672', 'user1672.jpg'),
-(7, '168', 'user168.jpg'),
-(8, '2416', 'user2416.jpg'),
-(9, '8516', 'user8516.jpg'),
-(10, '2797', 'user2797.jpg'),
-(11, '4151', 'user4151.jpg'),
-(12, '6675', 'user6675.png'),
-(13, 'user4151', 'user.jpeg'),
-(14, '7861', 'user7861.jpeg'),
-(15, '8839', 'user8839.jpeg'),
-(16, '5931', 'user5931.jpeg'),
-(17, '4208', 'user4208.jpeg'),
-(18, '20', 'user20.jpeg'),
-(19, '9445', 'user9445.jpeg'),
-(20, '9184', 'user9184.jpeg'),
-(21, '8520', 'user8520.jpeg'),
-(22, '5293', 'user5293.jpeg'),
-(23, '4859', 'user4859.jpeg'),
-(24, '9180', 'user9180.jpg'),
-(25, '211', 'user211.jpg'),
-(26, '9943', 'user9943.jpg'),
-(27, '9496', 'user9496.jpg'),
-(28, '9827', 'user9827.jpg');
 
 -- --------------------------------------------------------
 
@@ -302,12 +257,6 @@ ALTER TABLE `business_permit`
   ADD PRIMARY KEY (`business_permit_no`);
 
 --
--- Indexes for table `cases`
---
-ALTER TABLE `cases`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `cert_of_indigency`
 --
 ALTER TABLE `cert_of_indigency`
@@ -330,12 +279,6 @@ ALTER TABLE `officials`
 --
 ALTER TABLE `ordinances`
   ADD PRIMARY KEY (`ordinance_no`);
-
---
--- Indexes for table `picture`
---
-ALTER TABLE `picture`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `residents`
@@ -369,7 +312,7 @@ ALTER TABLE `adult_brgy_clearance`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `announcement_no` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `announcement_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `blotter_record`
@@ -384,16 +327,10 @@ ALTER TABLE `business_permit`
   MODIFY `business_permit_no` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cases`
---
-ALTER TABLE `cases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `cert_of_indigency`
 --
 ALTER TABLE `cert_of_indigency`
-  MODIFY `indigency_cert_no` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `indigency_cert_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `minor_brgy_clearance`
@@ -406,12 +343,6 @@ ALTER TABLE `minor_brgy_clearance`
 --
 ALTER TABLE `ordinances`
   MODIFY `ordinance_no` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `picture`
---
-ALTER TABLE `picture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `residents`
@@ -429,7 +360,7 @@ ALTER TABLE `resolutions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
