@@ -32,7 +32,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bued Info. System | Issue Business Permit</title>
+        <title>BRMS | Issue Business Permit</title>
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!-- Our Custom CSS -->
@@ -158,7 +158,7 @@
                     }
                     ?>
                 <div class="panel panel-default sammacmedia">
-                    <div class="panel-heading">Bued Information System | Issue Business Permit</div>
+                    <div class="panel-heading">BRMS | Issue Business Permit</div>
                     <div class="panel-body">
                         <form method="post" action="business-permit-print.php">
                             <div class="row form-group">
@@ -241,7 +241,7 @@
                 <div class="line"></div>
                 <footer>
                     <p class="text-center">
-                        Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company    
+                        BRMS &copy;<?php echo date("Y ");?> | Ronnel Brosola    
                     </p>
                 </footer>
             </div>

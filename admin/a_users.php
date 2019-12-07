@@ -93,7 +93,7 @@ if (isset($_POST['submit']))
             </div>
         <?php endif ?>
         <div class="panel panel-default sammacmedia">
-            <div class="panel-heading">BRMS | Add Users</div>
+            <div class="panel-heading"> | Add Users</div>
             <div class="panel-body">
                 <form method="post" action="a_users.php">
                     <div class="row form-group">

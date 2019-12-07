@@ -17,7 +17,7 @@ $eprow=mysqli_fetch_array($sqlE);
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Bued Information System</title>
+        <title>BRMS</title>
 
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -118,7 +118,7 @@ $eprow=mysqli_fetch_array($sqlE);
 <div class="row">
 <div class="col-md-8">
     <div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Information System | Add New Users</div>
+            <div class="panel-heading">BRMS | Add New Users</div>
         <div class="panel-body">
             <form method="post" action="settings.php" >
         <div class="row form-group">
@@ -169,7 +169,7 @@ $eprow=mysqli_fetch_array($sqlE);
     </div>
     <div class="col-md-4">
     <div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued InfoSys Password</div>
+            <div class="panel-heading">BRMS Password</div>
         <div class="panel-body">
             <form method="post" action="settings.php">
         <div class="row form-group">
@@ -208,7 +208,7 @@ $eprow=mysqli_fetch_array($sqlE);
                 <div class="line"></div>
                 <footer>
             <p class="text-center">
-            Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company
+            BRMS &copy;<?php echo date("Y ");?> | Ronnel Brosola
             </p>
             </footer>
             </div>
