@@ -61,8 +61,8 @@ i, span {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: green;
-    color: #000000;
+    background: #333;
+    color: #fff;
     transition: all 0.3s;
 }
 
@@ -298,17 +298,18 @@ a.article, a.article:hover {
     }
 }
 .samuel{
-    background-color: red;
+    background-color: #363434;
     color: #fafafa;
-    box-shadow: 2px 2px 8px 1px #ccc;
+    box-shadow: 2px 2px 1px 1px #f1e0e0;
+    border-radius: 15px;
 }
 .strover{
-    background-color: green;
+    background-color: #ea4c4c;
     color: #fafafa;
     box-shadow: 2px 2px 8px 1px #ccc;
 }
 .sammac{
-    background-color: orange;
+    background-color: #008000;
     color: #fafafa;
     box-shadow: 2px 2px 8px 1px #ccc;
 }
@@ -316,7 +317,7 @@ a.article, a.article:hover {
 /******************** Custom css ********************/ 
 .ml-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .ml-menu {
@@ -325,7 +326,7 @@ a.article, a.article:hover {
 
 .resident-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .resident-menu {
@@ -334,7 +335,7 @@ a.article, a.article:hover {
 
 .blotter-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .blotter-menu {
@@ -343,7 +344,7 @@ a.article, a.article:hover {
 
 .event-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .event-menu {
@@ -352,7 +353,7 @@ a.article, a.article:hover {
 
 .business-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .business-menu {
@@ -361,7 +362,7 @@ a.article, a.article:hover {
 
 .ordinances-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .ordinances-menu {
@@ -370,16 +371,25 @@ a.article, a.article:hover {
 
 .resolutions-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .resolutions-menu {
     display: none;
 }
 
+/*.clearance-menu a {
+    padding-left: 15px!important;
+    background: #363434;
+}
+
+.clearance-menu {
+    display:none;
+}*/
+
 .officials-menu a {
     padding-left: 15px!important;
-    background: #003801;
+    background: #363434;
 }
 
 .officials-menu {

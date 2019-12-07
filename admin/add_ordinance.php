@@ -1,6 +1,6 @@
 <?php require_once('includes/session.php');
 require_once('includes/conn.php');
-if (!isset($_SESSION["usertype"])) 
+if (isset($_SESSION["usertype"])) 
 {
     if ($_SESSION["usertype"] != 1) {
         header("Location:../access-denied.php");
@@ -37,7 +37,7 @@ $menu = 'add_ordinances';
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right  makotasamuel">
+                    <ul class="nav navbar-nav navbar-right  samuel">
                         <li><a href="#"><?php require_once('includes/name.php');?></a></li>
                         <li ><a href="logout.php"><i class="fa fa-power-off"> Logout</i></a></li>
                     </ul>
@@ -75,7 +75,7 @@ $menu = 'add_ordinances';
         }
         ?>
         <div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Information System | Add an Ordinance</div>
+            <div class="panel-heading">BRMS | Add an Ordinance</div>
             <div class="panel-body">
                 <form method="post" action="add_ordinance.php">
                     <div class="row form-group">
@@ -110,7 +110,7 @@ $menu = 'add_ordinances';
         <div class="line"></div>
         <footer>
             <p class="text-center">
-            Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company    
+            Barangay Records Management System &copy;<?php echo date(" Y ");?> | Ronnel Brosola    
             </p>
         </footer>
     </div>

@@ -120,7 +120,7 @@ endif ?>
         </li>
         <!-- CERTIFICATE OF INDIGENCY -->
         <li class="indigency-toggle <?php echo ($page == 'indigency') ? 'active' : '' ?>">
-            <a href="issue-indigency-certiication.php">
+            <a href="issue-indigency-certification.php">
                 <i class="fa fa-table"></i>
                 Indigency
             </a>

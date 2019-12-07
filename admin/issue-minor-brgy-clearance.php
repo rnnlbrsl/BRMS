@@ -30,7 +30,7 @@ if ($res_n['count'] >= 1) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Bued Info. System | Issue Clearance</title>
+  <title>BRMS | Barangay Clearance</title>
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -57,7 +57,7 @@ if ($res_n['count'] >= 1) {
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right  makotasamuel">
+                    <ul class="nav navbar-nav navbar-right  samuel">
                         <li><a href="#"><?php require_once('includes/name.php');?></a></li>
                         <li ><a href="logout.php"><i class="fa fa-power-off"> Logout</i></a></li>
                     </ul>
@@ -153,7 +153,7 @@ if ($res_n['count'] >= 1) {
         }
         ?>
         <div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Information System | Issue Minor Baranggay Clearance</div>
+            <div class="panel-heading">BRMS | Issue Minor Baranggay Clearance</div>
             <div class="panel-body">
                 <form method="post" action="BarangayClearanceminor.php">
                     <div class="row form-group">
@@ -231,7 +231,7 @@ if ($res_n['count'] >= 1) {
         <div class="line"></div>
         <footer>
             <p class="text-center">
-            Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company    
+            Barangay Records Management System &copy;<?php echo date("Y ");?> | Ronnel Brosola    
             </p>
         </footer>
     </div>

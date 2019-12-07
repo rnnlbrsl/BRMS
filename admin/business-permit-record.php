@@ -45,7 +45,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Bued Information System | Business Permits</title>
+        <title>BRMS | Business Permits</title>
 
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -67,7 +67,7 @@
                 <nav class="navbar navbar-default sammacmedia">
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right  makotasamuel">
+                            <ul class="nav navbar-nav navbar-right  samuel">
                                 <li><a href="#"><?php require_once('includes/name.php');?></a></li>
                                 <li ><a href="logout.php"><i class="fa fa-power-off"> Logout </i></a></li>
                             </ul>
@@ -76,7 +76,7 @@
                 </nav>
                 <div class="line"></div>
 		<div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Info. System All Business Permits</div>
+            <div class="panel-heading">BRMS | All Business Permits</div>
         <div class="panel-body">
                         <table class="table table-striped thead-dark table-bordered table-hover" id="myTable">
                 <thead>
@@ -147,7 +147,7 @@
                 <div class="line"></div>
                 <footer>
             <p class="text-center">
-              Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company
+              Barangay Records Management System &copy;<?php echo date(" Y ");?> | Ronnel Brosola
             </p>
             </footer>
             </div>

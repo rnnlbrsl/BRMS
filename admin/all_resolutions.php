@@ -67,7 +67,7 @@ elseif(isset($_POST['Update']))
                 <nav class="navbar navbar-default sammacmedia">
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right  makotasamuel">
+                            <ul class="nav navbar-nav navbar-right  samuel">
                                 <li><a href="#"><?php require_once('includes/name.php');?></a></li>
                                 <li ><a href="logout.php"><i class="fa fa-power-off"> Logout </i></a></li>
                             </ul>
@@ -76,7 +76,7 @@ elseif(isset($_POST['Update']))
                 </nav>
                 <div class="line"></div>
 		<div class="panel panel-default sammacmedia">
-            <div class="panel-heading">Bued Info. System All Resolutions</div>
+            <div class="panel-heading">BRMS | All Resolutions</div>
         <div class="panel-body">
                         <table class="table table-striped thead-dark table-bordered table-hover" id="myTable">
                 <thead>
@@ -143,7 +143,7 @@ elseif(isset($_POST['Update']))
                 <div class="line"></div>
                 <footer>
             <p class="text-center">
-              Bued Information System &copy;<?php echo date("Y ");?> All Rights Reserved Shekinah and Company
+              Barangay Records Management System &copy;<?php echo date(" Y ");?> | Ronnel Brosola
             </p>
             </footer>
             </div>
