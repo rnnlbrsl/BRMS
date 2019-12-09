@@ -1,7 +1,6 @@
 <?php 
-//require_once('includes/db.php');
 require_once('includes/conn.php');
-// var_dump(md5('ramos'));exit();
+// var_dump(md5('brosola'));exit();
 
 	if(isset($mysqli,$_POST['submit']))
 	{

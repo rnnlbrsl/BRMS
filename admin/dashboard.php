@@ -4,7 +4,8 @@ require_once('includes/conn.php');
 require_once('check.php');    
 if (isset($_SESSION["usertype"])) 
 {
-    if ($_SESSION["usertype"] != 1) {
+    if ($_SESSION["usertype"] != 1) 
+    {
         header("Location:../access-denied.php");
     }
 }
@@ -63,7 +64,7 @@ $page = 'dashboard';
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <div class="panel panel strover sammacmedia">
+                    <div class="panel panel sammac sammacmedia">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-4">

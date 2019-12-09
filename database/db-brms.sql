@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2019 at 12:09 AM
+-- Generation Time: Dec 09, 2019 at 02:20 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -73,6 +73,17 @@ CREATE TABLE `blotter_record` (
   `blotter_details` text NOT NULL,
   `blotter_date` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blotter_record`
+--
+
+INSERT INTO `blotter_record` (`blotter_no`, `resident_no`, `accused`, `blotter_details`, `blotter_date`) VALUES
+(1, 4, 'Rianjed Brosola', 'Maingay disoras ng gabi. The quick brown fox jumps over the lazy dog!', ' 09 Dec 2019 '),
+(2, 5, 'Rhianne Angel Brosola', 'Maingay din kapag gabi.', ' 09 Dec 2019 '),
+(3, 6, 'Rhianne Angel Brosola', 'Maingay kapag gabi.', ' 09 Dec 2019 '),
+(4, 0, 'Rhianne Angel Brosola', 'Maingay kapag gabi.', ' 09 Dec 2019 '),
+(5, 0, 'Rianjed Brosola', 'Nag iingay.', ' 09 Dec 2019 ');
 
 -- --------------------------------------------------------
 
@@ -186,7 +197,10 @@ CREATE TABLE `residents` (
 INSERT INTO `residents` (`id`, `lastname`, `firstname`, `middlename`, `birthdate`, `age`, `address`, `sex`, `date_registered`, `tmp`) VALUES
 (1, 'Brosola', 'Rian Jed', 'Valdez', '2012-03-05', 7, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 06 Dec 2019 ', ''),
 (2, 'Brosola', 'Ronnel', 'Valdez', '1992-12-24', 27, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 06 Dec 2019 ', ''),
-(3, 'Brosola', 'Rio Amor', 'Valdez', '1994-04-09', 25, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'F', ' 06 Dec 2019 ', '');
+(3, 'Brosola', 'Rio Amor', 'Valdez', '1994-04-09', 25, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'F', ' 06 Dec 2019 ', ''),
+(4, 'Brosola', 'Ronnel', '', '2019-12-09', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 09 Dec 2019 ', ''),
+(5, 'Brosola', 'Ronnel', 'Valdez', '2019-12-09', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 09 Dec 2019 ', ''),
+(6, 'Brosola', 'Ronnel', 'Valdez', '2019-12-09', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 09 Dec 2019 ', '');
 
 -- --------------------------------------------------------
 
@@ -318,7 +332,7 @@ ALTER TABLE `announcement`
 -- AUTO_INCREMENT for table `blotter_record`
 --
 ALTER TABLE `blotter_record`
-  MODIFY `blotter_no` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `blotter_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `business_permit`
@@ -348,7 +362,7 @@ ALTER TABLE `ordinances`
 -- AUTO_INCREMENT for table `residents`
 --
 ALTER TABLE `residents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `resolutions`
@@ -360,7 +374,7 @@ ALTER TABLE `resolutions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -112,7 +112,7 @@ i, span {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #363434;
+    background: #0086c3;
 }
 
 #sidebar .sidebar-header strong {
@@ -122,7 +122,7 @@ i, span {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #363434;
+    border-bottom: 1px solid #0086c3;
 }
 
 #sidebar ul li a {
@@ -183,7 +183,7 @@ i, span {
 }
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #ea4c4c;
+    background: #1e88e5;
 }
 
 

@@ -1,23 +1,25 @@
 <?php
-    $sql1 ="SELECT count(id) As total1 FROM residents";
-    $result1=mysqli_query($mysqli,$sql1);
+    $sqlresident ="SELECT count(id) As resCount FROM residents";
+    $resResult=mysqli_query($mysqli,$sqlresident);
 
-    if ($result1)
+    if ($resResult)
     {
-        $values=mysqli_fetch_assoc($result1);
-        $residents=$values['total1'];
+        $values=mysqli_fetch_assoc($resResult);
+        $residents=$values['resCount'];
     }
     else
         $residents = 0;
 
-    $sql2 ="SELECT count(blotter_no) As total2 FROM blotter_record ";
-    $result2=mysqli_query($mysqli,$sql2);
-    if ($result2) 
+    $sqlBlotter ="SELECT count(blotter_no) As blotterCount FROM blotter_record ";
+    $blotterResult=mysqli_query($mysqli,$sqlBlotter);
+    if ($blotterResult) 
     {
-        $values=mysqli_fetch_assoc($result2);
-        $cases=$values['total2'];
+        $values=mysqli_fetch_assoc($blotterResult);
+        $cases=$values['blotterCount'];
     }
     else
         $cases = 0;
+
+    $sql3
 
 ?>

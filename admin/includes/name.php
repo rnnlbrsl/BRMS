@@ -1,4 +1,4 @@
-
+<!-- 
 <SCRIPT LANGUAGE="JavaScript">
 currentTime=new Date();
 //getHour() function will retrieve the hour from current time
@@ -8,5 +8,5 @@ else if(currentTime.getHours()<17)
 document.write("<b>Good Afternoon! </b>");
 else 
 document.write("<b>Good Evening! </b>");
-</SCRIPT>
+</SCRIPT> -->
 <?php echo $_SESSION['name'].str_repeat('&nbsp;', 1).$_SESSION['surname']?>
