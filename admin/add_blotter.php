@@ -68,11 +68,10 @@ $menu = 'add_blotter';
 
         $res_n = mysqli_query($mysqli, $sql_n);
         
-        var_dump($res_n);exit();
-
         if(mysqli_num_rows($res_n) > 0)
         {
-          $resident_id = $res_n->id;
+          $result = fetch_array($res_n);
+          $resident_id = $result[‘id’];
         }
         else
         {
@@ -80,8 +79,9 @@ $menu = 'add_blotter';
           $results = mysqli_query($mysqli,$sql);
           $resident_id = mysqli_insert_id($mysqli);
         }
-
+        
         $sql = "INSERT INTO blotter_record(resident_no,accused,blotter_details,blotter_date)VALUES('$resident_id','$accused','$details','$created_at')";
+        
 
         $results = mysqli_query($mysqli,$sql);
 
