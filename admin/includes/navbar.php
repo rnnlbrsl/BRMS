@@ -20,7 +20,7 @@ endif ?>
         <li class="resident-toggle <?php echo ($page == 'residents') ? 'active' : '' ?>">
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="fa fa-table"></i>
-                Residents<span class="glyphicon glyphicon-menu-right pull-right"></span>
+                Resident Information<span class="glyphicon glyphicon-menu-right pull-right"></span>
             </a>
             <ul class="resident-menu">
                 <li class="<?php echo ($menu == 'all_residents') ? 'active' : '' ?>">
@@ -122,7 +122,7 @@ endif ?>
         <li class="indigency-toggle <?php echo ($page == 'indigency') ? 'active' : '' ?>">
             <a href="issue-indigency-certification.php">
                 <i class="fa fa-table"></i>
-                Indigency
+                Certificate Issuance
             </a>
         </li>
         <!-- BUSINESS PERMIT -->

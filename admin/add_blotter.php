@@ -67,7 +67,9 @@ $menu = 'add_blotter';
         $sql_n = "SELECT * FROM residents WHERE lastname ='$surname' AND firstname ='$name' AND middlename='$middlename' AND birthdate='$bday' AND age='$age' AND sex='$gender'";
 
         $res_n = mysqli_query($mysqli, $sql_n);
-        
+        // $res = mysqli_free_result($res_n);
+        // var_dump($res);exit();
+
         if(mysqli_num_rows($res_n) > 0)
         {
           $result = fetch_array($res_n);
