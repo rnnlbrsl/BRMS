@@ -25,6 +25,20 @@ $page = 'dashboard';
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/awesome/font-awesome.css">
         <link rel="stylesheet" href="assets/css/animate.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <style>
+            p {
+                color: #fff;
+                text-decoration: underline;
+            }
+            .row .sammacmedia {
+                padding: 0 20px;
+            }
+            .huge {
+                font-size: 36px;
+                font-family: 'Oswald', sans-serif;
+            }
+        </style>
     </head>
     <body>
         <div class="wrapper">
@@ -48,39 +62,57 @@ $page = 'dashboard';
                 </nav>
                 <hr>
                 <div class="row">
-                <div class="col-lg-6 col-md-6 ">
+                <div class="col-lg-3 col-md-3 ">
                     <div class="panel panel sammac sammacmedia">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-xs-4">
-                                    <i class="fa fa-user fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php echo $residents;?></div>
-                                    <div>Total Number Of Residents</div>
+                                <p>Total Number Of Residents</p>
+                                <div class="col-xs-9 text-center">
+                                    <div class="huge"><?php echo "80";?></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="panel panel sammac sammacmedia">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-xs-4">
-                                    <i class="fa fa-link fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php echo $cases;?></div>
-                                    <div>Total Number Of Blotter Records</div>
+                                <p>Male</p>
+                                <div class="col-xs-9 text-center">
+                                    <div class="huge"><?php echo "50";?></div>
                                 </div>
                             </div>
                         </div>
                      
                     </div>
                 </div>
-
-                    
+                <div class="col-lg-3 col-md-3">
+                    <div class="panel panel sammac sammacmedia">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <p>Female</p>
+                                <div class="col-xs-9 text-center">
+                                    <div class="huge"><?php echo "20";?></div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="panel panel sammac sammacmedia">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <p>Registered Voters</p>
+                                <div class="col-xs-9 text-center">
+                                    <div class="huge"><?php echo "25";?></div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>    
                     
             </div>
                 <div class="line"><hr></div>

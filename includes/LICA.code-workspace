@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "/Users/macbook/web/carmax-web"
+		},
+		{
+			"path": "/Users/macbook/web/carmax-admin"
+		},
+		{
+			"path": "/Users/macbook/web/carmax-api"
+		},
+		{
+			"path": "/Users/macbook/web/goparts-web"
+		},
+		{
+			"path": "/Users/macbook/web/goparts-admin"
+		},
+		{
+			"path": "/Users/macbook/web/goparts-api"
+		},
+		{
+			"path": "/Users/macbook/web/rapide-admin"
+		}
+	],
+	"settings": {}
+}

@@ -13,10 +13,10 @@ require_once('includes/conn.php');
 			while($row=mysqli_fetch_array($query1))
 			{
 				$db_username=$row["username"];
+				$db_email = $row["email"];
 				$db_password=$row["password"];
 				$db_type=$row["permission"];
-
-				if($username==$db_username && $password==$db_password)
+				if($username===$db_username && $password===$db_password || $username===$db_email && $password===$db_password)
 				{
 					session_start();
 					$_SESSION["username"]=$db_username;
@@ -33,6 +33,10 @@ require_once('includes/conn.php');
 					{
 						echo "<script>alert('Username and Password did not match.');</script>";
 					}
+				}
+				else
+				{
+					echo "<script>alert('Username and Password did not match.');</script>";
 				}
 			}
 		}
