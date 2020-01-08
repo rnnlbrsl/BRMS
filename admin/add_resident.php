@@ -59,11 +59,14 @@ $menu = 'add_residents';
         $middlename = mysqli_real_escape_string($mysqli,$_POST['middlename']);
         $surname = mysqli_real_escape_string($mysqli,$_POST['lastname']);
         $bdate = mysqli_real_escape_string($mysqli,$_POST['bdate']);
+        $bplace = mysqli_real_escape_string($mysqli,$_POST['birthplace']);
         $address = mysqli_real_escape_string($mysqli,$_POST['address']);
         $year = date('Y', time());
         $birth_year = date('Y', strtotime($bdate));
         $age = $year - $birth_year;
-        $gender = mysqli_real_escape_string($mysqli,$_POST['gender']);     
+        $gender = mysqli_real_escape_string($mysqli,$_POST['gender']);
+        $cstatus = mysqli_real_escape_string($mysqli,$_POST['civilstatus']); 
+        $vstatus = mysqli_real_escape_string($mysqli,$_POST['voterstatus']);    
         $joined = date(" d M Y ");
         $tmp = rand(1,9999);
 // $file = $_FILES['file'];
@@ -76,7 +79,7 @@ $menu = 'add_residents';
 // $fileActualExt = strtolower(end($fileExt));
 // $allowed = array('jpg','jpeg','png');
 
-        $sql = "INSERT INTO residents(lastname,firstname,middlename,birthdate,age,address,sex,date_registered)VALUES('$surname','$name','$middlename','$bdate','$age','$address','$gender','$joined')";
+        $sql = "INSERT INTO residents(lastname,firstname,middlename,birthdate,age,address,sex,civilstatus,voterstatus,date_registered)VALUES('$surname','$name','$middlename','$bdate','$bplace','$age','$address','$gender','$joined')";
         $results = mysqli_query($mysqli,$sql);
 // if(in_array($fileActualExt, $allowed)){
 // if($fileError === 0){
@@ -142,7 +145,7 @@ $menu = 'add_residents';
 </div>  --> 
 <div class="col-lg-6">
   <label>Birthplace</label>
-  <input type="text" class="form-control" name="bPlace">
+  <input type="text" class="form-control" name="birthplace">
 </div> 
 </div>
 <div class="row form-group">
@@ -155,7 +158,7 @@ $menu = 'add_residents';
   </div>
   <div class="col-lg-4">
     <label>Civil Status</label>
-    <select class="form-control" name="civilStatus">
+    <select class="form-control" name="civilstatus">
       <option>Single</option>
       <option>Married</option>
       <option>Separated</option>
@@ -165,13 +168,13 @@ $menu = 'add_residents';
   </div>  
   <div class="col-lg-4">
     <label>Voter</label>
-    <select class="form-control" name="voterStatus">
+    <select class="form-control" name="voterstatus">
       <option>Yes</option>
       <option>No</option>      
     </select>
   </div>
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-6 text-center">
         <div id="my_camera"></div>
         <br/>
@@ -181,7 +184,7 @@ $menu = 'add_residents';
     <div class="col-md-6 text-center">
         <div id="results"></div>
     </div>
-</div>
+</div> -->
 <div class="row clearfix">
   </div>
 <div class="row">
@@ -234,7 +237,8 @@ $menu = 'add_residents';
 
   });
 </script>
-<script language="JavaScript">
+
+<!-- <script language="JavaScript">
     Webcam.set({
         width: 300, //490,
         height: 250, //390,
@@ -250,7 +254,7 @@ $menu = 'add_residents';
             document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
         } );
     }
-</script>
+</script> -->
 
 </body>
 </html>

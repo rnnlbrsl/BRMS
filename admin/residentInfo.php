@@ -18,8 +18,6 @@
                 </div>
                 <form >
                 <div class="modal-body">
-	 
-                    
                     <div class="row">
                     <div class="col-md-6">
                     <label>Name</label> 

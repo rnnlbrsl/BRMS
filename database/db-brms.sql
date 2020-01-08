@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2019 at 02:20 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Jan 08, 2020 at 03:13 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -49,7 +49,7 @@ CREATE TABLE `announcement` (
   `official_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `details` text NOT NULL,
-  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `is_active` tinyint(1) NOT NULL DEFAULT 1,
   `date_posted` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -183,9 +183,12 @@ CREATE TABLE `residents` (
   `firstname` varchar(255) NOT NULL,
   `middlename` varchar(255) NOT NULL,
   `birthdate` date NOT NULL,
+  `birthplace` varchar(100) NOT NULL,
   `age` int(11) NOT NULL,
   `address` varchar(255) NOT NULL,
   `sex` varchar(15) NOT NULL,
+  `civilstatus` varchar(3) NOT NULL,
+  `voterstatus` varchar(3) NOT NULL,
   `date_registered` varchar(32) NOT NULL,
   `tmp` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -194,13 +197,11 @@ CREATE TABLE `residents` (
 -- Dumping data for table `residents`
 --
 
-INSERT INTO `residents` (`id`, `lastname`, `firstname`, `middlename`, `birthdate`, `age`, `address`, `sex`, `date_registered`, `tmp`) VALUES
-(1, 'Brosola', 'Rian Jed', 'Valdez', '2012-03-05', 7, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 06 Dec 2019 ', ''),
-(2, 'Brosola', 'Ronnel', 'Valdez', '1992-12-24', 27, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 06 Dec 2019 ', ''),
-(3, 'Brosola', 'Rio Amor', 'Valdez', '1994-04-09', 25, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'F', ' 06 Dec 2019 ', ''),
-(4, 'Brosola', 'Ronnel', '', '2019-12-09', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 09 Dec 2019 ', ''),
-(5, 'Brosola', 'Ronnel', 'Valdez', '2019-12-09', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 09 Dec 2019 ', ''),
-(6, 'Brosola', 'Ronnel', 'Valdez', '2019-12-09', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', ' 09 Dec 2019 ', '');
+INSERT INTO `residents` (`id`, `lastname`, `firstname`, `middlename`, `birthdate`, `birthplace`, `age`, `address`, `sex`, `civilstatus`, `voterstatus`, `date_registered`, `tmp`) VALUES
+(1, 'Brosola', 'Rian Jed', 'Valdez', '2020-02-04', '', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', '', '', ' 06 Dec 2019 ', ''),
+(2, 'Brosola', 'Ronnel', 'Valdez', '1992-12-24', '', 27, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', '', '', ' 06 Dec 2019 ', ''),
+(3, 'Brosola', 'Rio Amor', 'Valdez', '1994-04-09', '', 25, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'F', '', '', ' 06 Dec 2019 ', ''),
+(5, 'Brosola', 'Ronnel', 'Valdez', '2019-12-09', '', 0, '004 Bugarin St., Quibuar, Alaminos City, Pangasinan', 'M', '', '', ' 09 Dec 2019 ', '');
 
 -- --------------------------------------------------------
 

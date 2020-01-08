@@ -34,14 +34,14 @@ endif ?>
         <li class="blotter-toggle <?php echo ($page == 'blotter') ? 'active' : '' ?>">
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="fa fa-table"></i>
-                Blotter<span class="glyphicon glyphicon-menu-right pull-right"></span>
+                Blotter Records<span class="glyphicon glyphicon-menu-right pull-right"></span>
             </a>
             <ul class="blotter-menu">
                 <li class="<?php echo ($menu == 'add_blotter') ? 'active' : '' ?>">
                     <a href="add_blotter.php">Add Blotter</a>
                 </li>
                 <li class="<?php echo ($menu == 'blotter_records') ? 'active' : '' ?>">
-                    <a href="blotter_records.php">Blotter Records</a>
+                    <a href="blotter_records.php">All Blotter Records</a>
                 </li>
             </ul>
         </li>
