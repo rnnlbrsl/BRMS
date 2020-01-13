@@ -37,6 +37,16 @@
                     <label>Address</label> 
                     <input name="address" type="text" class="form-control" value="<?php echo $row['address'];?>" readonly>        
                     </div>    
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                    <label>Civil Status</label> 
+                    <input name="name" type="text" class="form-control" value="<?php echo $row['civilstatus'];?>" readonly>    
+                    </div>
+                    <div class="col-md-6">
+                    <label>Voter Status</label> 
+                    <input name="surname" type="text" class="form-control" value="<?php echo $row['voterstatus'];?>" readonly>        
+                    </div>    
                     </div>   
                      <div class="row">
                    <div class="col-md-6">

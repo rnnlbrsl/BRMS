@@ -24,7 +24,7 @@ $menu = 'add_residents';
   <link rel="stylesheet" href="assets/awesome/font-awesome.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <style type="text/css">
-        #results { border:1px solid; background:#ccc; }
+    #results { border:1px solid; background:#ccc; }
   </style>
 
 
@@ -174,19 +174,19 @@ $menu = 'add_residents';
     </select>
   </div>
 </div>
-<!-- <div class="row">
-    <div class="col-md-6 text-center">
-        <div id="my_camera"></div>
-        <br/>
-        <input type=button value="Take Snapshot" onClick="take_snapshot()">
-        <input type="hidden" name="image" class="image-tag">
-    </div>
-    <div class="col-md-6 text-center">
-        <div id="results"></div>
-    </div>
-</div> -->
+<div class="row">
+<div class="col-md-6 text-center">
+<div id="my_camera"></div>
+<br/>
+<input type=button value="Take Snapshot" onClick="take_snapshot()">
+<input type="hidden" name="image" class="image-tag">
+</div>
+<div class="col-md-6 text-center">
+<div id="results"></div>
+</div>
+</div>
 <div class="row clearfix">
-  </div>
+</div>
 <div class="row">
   <div class="col-md-6">
     <button type="submit" name="submit" class="btn btn-suc btn-block"><span class="fa fa-plus"></span> Process</button>  
@@ -238,23 +238,26 @@ $menu = 'add_residents';
   });
 </script>
 
-<!-- <script language="JavaScript">
-    Webcam.set({
-        width: 300, //490,
-        height: 250, //390,
-        image_format: 'jpeg',
-        jpeg_quality: 90
-    });
-  
-    Webcam.attach( '#my_camera' );
-  
-    function take_snapshot() {
-        Webcam.snap( function(data_uri) {
-            $(".image-tag").val(data_uri);
-            document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
-        } );
-    }
-</script> -->
+
+<!-- Camera Script -->
+
+<script language="JavaScript">
+Webcam.set({
+width: 300, //490,
+height: 250, //390,
+image_format: 'jpeg',
+jpeg_quality: 90
+});
+
+Webcam.attach( '#my_camera' );
+
+function take_snapshot() {
+Webcam.snap( function(data_uri) {
+$(".image-tag").val(data_uri);
+document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+} );
+}
+</script>
 
 </body>
 </html>

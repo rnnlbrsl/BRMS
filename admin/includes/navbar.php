@@ -45,20 +45,6 @@ endif ?>
                 </li>
             </ul>
         </li>
-        <li class="event-toggle <?php echo ($page == 'add_event') ? 'active' : '' ?>">
-            <a href="#">
-               <i class="fa fa-table"></i>
-               Events<span class="glyphicon glyphicon-menu-right pull-right"></span>
-            </a>
-            <ul class="event-menu">
-                <li class="<?php echo ($menu == 'post_event') ? 'active' : '' ?>">
-                    <a href="post_an_announcement.php">Post an announcement</a>
-                </li>
-                <li class="<?php echo ($menu == 'add_event') ? 'active' : '' ?>">
-                    <a href="events.php">Announcement Feed</a>
-                </li>
-            </ul>
-        </li>
         <li class="ordinances-toggle <?php echo ($page == 'ordinances') ? 'active' : '' ?>">
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="fa fa-table"></i>
@@ -70,21 +56,6 @@ endif ?>
                 </li>
                 <li class="<?php echo ($menu == 'all_ordinances') ? 'active' : '' ?>">
                     <a href="all_ordinances.php">All Ordinances</a>
-                </li>
-            </ul>
-        </li>
-        <!-- OFFICIALS -->
-        <li class="officials-toggle <?php echo ($page == 'officials') ? 'active' : '' ?>">
-            <a href="javascript:void(0);" class="menu-toggle">
-                <i class="fa fa-table"></i>
-                Officials<span class="glyphicon glyphicon-menu-right pull-right"></span>
-            </a>
-            <ul class="officials-menu">
-                <li class="<?php echo ($menu == 'add_officials') ? 'active' : '' ?>">
-                    <a href="add_officials.php">Add a Barangay Official</a>
-                </li>
-                <li class="<?php echo ($menu == 'all_officials') ? 'active' : '' ?>">
-                    <a href="all_officials.php">All Barangay Officials</a>
                 </li>
             </ul>
         </li>
@@ -107,7 +78,7 @@ endif ?>
         <li class="toggle <?php echo ($page == 'clearance') ? 'active' : '' ?>">
             <a href="javascript:void(0);" class="menu-toggle">
                 <i class="fa fa-table"></i>
-                Clearance<span class="glyphicon glyphicon-menu-right pull-right"></span>
+                Certificate Issuance<span class="glyphicon glyphicon-menu-right pull-right"></span>
             </a>
             <ul class="ml-menu">
                 <li class="<?php echo ($menu == 'minor') ? 'active' : '' ?>">
@@ -116,14 +87,10 @@ endif ?>
                 <li class="<?php echo ($menu == 'adult') ? 'active' : '' ?>">
                     <a href="issue-adult-brgy-clearance.php">Adult Brgy. Clearance</a>
                 </li>
+                <li class="<?php echo ($menu == 'indigency') ? 'active' : '' ?>">
+                    <a href="issue-indigency-certification.php">Certificate on Indigency</a>
+                </li>
             </ul>
-        </li>
-        <!-- CERTIFICATE OF INDIGENCY -->
-        <li class="indigency-toggle <?php echo ($page == 'indigency') ? 'active' : '' ?>">
-            <a href="issue-indigency-certification.php">
-                <i class="fa fa-table"></i>
-                Certificate Issuance
-            </a>
         </li>
         <!-- BUSINESS PERMIT -->
         <li class="business-toggle <?php echo ($page == 'business-menu') ? 'active' : '' ?>">

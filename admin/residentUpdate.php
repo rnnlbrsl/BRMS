@@ -55,7 +55,19 @@
                             <label>Gender</label> 
                             <input name="gender" type="text" class="form-control" value="<?php echo $row['sex'];?>">
                         </div>
-                    </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Civil Status</label> 
+                            <input name="civilstatus" type="option" class="form-control" value="<?php echo $row['civilstatus'];?>">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Voter Status</label> 
+                            <input name="voterstatus" type="option" class="form-control" value="<?php echo $row['voterstatus'];?>">
+                        </div>
+                    </div>                     
                  <div class="line">
                      <input type="submit" name="Update" id="action-update" class="btn btn-danger" value="Update" />
                  </div>
