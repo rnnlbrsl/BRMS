@@ -112,12 +112,6 @@ endif ?>
         if($_SESSION['permission']==1)
         {
         ?>
-        <li class="<?php echo ($page == 'gallery') ? 'active' : '' ?>">
-            <a href="gallery.php">
-                <i class="fa fa-film"></i>
-                Gallery
-            </a>
-        </li>
         <li class="<?php echo ($page == 'a_users') ? 'active' : '' ?>">
             <a href="a_users.php">
                 <i class="fa fa-user"></i>

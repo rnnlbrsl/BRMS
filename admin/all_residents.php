@@ -40,7 +40,7 @@ elseif(isset($_POST['Update']))
     $birth_year = date('Y', strtotime($birthdate));
     $age = $year - $birth_year;
 
-    $stmt = $mysqli->prepare("UPDATE residents SET lastname='$lastname', firstname='$firstname', middlename='$middlename', birthdate='$birthdate', age='$age', address='$address', sex='$gender' WHERE id = ? LIMIT 1");
+    $stmt = $mysqli->prepare("UPDATE residents SET lastname='$lastname', firstname='$firstname', middlename='$middlename', birthdate='$birthdate', address='$address', sex='$gender' WHERE id = ? LIMIT 1");
     $stmt->bind_param("i",$id);
     $stmt->execute();
     $stmt->close();
@@ -96,10 +96,11 @@ elseif(isset($_POST['Update']))
               <tr>
                 <th>No.</th>
                 <th>Full name</th>
-                <th>Birthdate</th>
                 <th>Sex</th>
-                <th>Age</th>
+                <th>Birthdate</th>
                 <th>Address</th>
+                <th>Civil Status</th>
+                <th>Voter Status</th>
                 <th>Date Registered</th>
                 <th>Action</th>
               </tr>
@@ -113,10 +114,11 @@ elseif(isset($_POST['Update']))
               <tr>
                 <td><?php echo $a;?></td> 
                 <td><?php echo $row['lastname'].' '.$row['firstname'].' '.$row['middlename'];?></td>  
-                <td><?php echo $row['birthdate'];?></td>
                 <td><?php echo $row['sex'];?></td>
-                <td><?php echo $row['age'];?></td>
+                <td><?php echo $row['birthdate'];?></td>
                 <td><?php echo $row['address'];?></td>
+                <td><?php echo $row['civilstatus'];?></td>
+                <td><?php echo $row['voterstatus'];?></td>
                 <td><?php echo $row['date_registered'];?></td>
                 <td style="display: block;">
                   <a href="#samstrover<?php echo $row['id']; ?>" data-toggle="modal">

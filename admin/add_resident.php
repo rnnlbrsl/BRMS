@@ -69,15 +69,15 @@ $menu = 'add_residents';
         $vstatus = mysqli_real_escape_string($mysqli,$_POST['voterstatus']);    
         $joined = date(" d M Y ");
         $tmp = rand(1,9999);
-// $file = $_FILES['file'];
-// $fileName =$file['name'];
-// $fileTmpName = $file['tmp_name'];
-// $fileSize = $file['size'];
-// $fileError = $file['error'];
-// $fileType = $file['type'];
-// $fileExt = explode('.', $fileName);
-// $fileActualExt = strtolower(end($fileExt));
-// $allowed = array('jpg','jpeg','png');
+        // $file = $_FILES['file'];
+        // $fileName =$file['name'];
+        // $fileTmpName = $file['tmp_name'];
+        // $fileSize = $file['size'];
+        // $fileError = $file['error'];
+        // $fileType = $file['type'];
+        // $fileExt = explode('.', $fileName);
+        // $fileActualExt = strtolower(end($fileExt));
+        // $allowed = array('jpg','jpeg','png');
 
         $sql = "INSERT INTO residents(lastname,firstname,middlename,birthdate,age,address,sex,civilstatus,voterstatus,date_registered)VALUES('$surname','$name','$middlename','$bdate','$bplace','$age','$address','$gender','$joined')";
         $results = mysqli_query($mysqli,$sql);
@@ -93,6 +93,26 @@ $menu = 'add_residents';
 // }
 //     }
 //         }
+
+
+    $img = $_POST['image'];
+    $folderPath = "assets/image/uploads/";
+  
+    $image_parts = explode(";base64,", $img);
+    $image_type_aux = explode("image/", $image_parts[0]);
+    $image_type = $image_type_aux[1];
+  
+    $image_base64 = base64_decode($image_parts[1]);
+    $fileName = uniqid() . '.png';
+  
+    $file = $folderPath . $fileName;
+    file_put_contents($file, $image_base64);
+  
+    print_r($fileName);
+  
+
+
+
         if($results==1){
           ?>
           <div class="alert alert-success animated bounce" id="sams1">
