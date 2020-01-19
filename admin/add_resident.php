@@ -55,19 +55,20 @@ $menu = 'add_residents';
       <div class="line"></div>
       <?php
       if(isset($mysqli,$_POST['submit'])){
-        $name = mysqli_real_escape_string($mysqli,$_POST['firstname']);
-        $middlename = mysqli_real_escape_string($mysqli,$_POST['middlename']);
         $surname = mysqli_real_escape_string($mysqli,$_POST['lastname']);
+        $fname = mysqli_real_escape_string($mysqli,$_POST['firstname']);
+        $middlename = mysqli_real_escape_string($mysqli,$_POST['middlename']);
+        $sex = mysqli_real_escape_string($mysqli,$_POST['sex']);
+
         $bdate = mysqli_real_escape_string($mysqli,$_POST['bdate']);
         $bplace = mysqli_real_escape_string($mysqli,$_POST['birthplace']);
-        $address = mysqli_real_escape_string($mysqli,$_POST['address']);
-        $year = date('Y', time());
-        $birth_year = date('Y', strtotime($bdate));
-        $age = $year - $birth_year;
-        $gender = mysqli_real_escape_string($mysqli,$_POST['gender']);
         $cstatus = mysqli_real_escape_string($mysqli,$_POST['civilstatus']); 
-        $vstatus = mysqli_real_escape_string($mysqli,$_POST['voterstatus']);    
-        $joined = date(" d M Y ");
+        $vstatus = mysqli_real_escape_string($mysqli,$_POST['voterstatus']); 
+        $address = mysqli_real_escape_string($mysqli,$_POST['address']);
+        // $year = date('Y', time());
+        // $birth_year = date('Y', strtotime($bdate));
+        // $age = $year - $birth_year;          
+        // $joined = date(" d M Y ");
         $tmp = rand(1,9999);
         // $file = $_FILES['file'];
         // $fileName =$file['name'];
@@ -79,7 +80,7 @@ $menu = 'add_residents';
         // $fileActualExt = strtolower(end($fileExt));
         // $allowed = array('jpg','jpeg','png');
 
-        $sql = "INSERT INTO residents(lastname,firstname,middlename,birthdate,age,address,sex,civilstatus,voterstatus,date_registered)VALUES('$surname','$name','$middlename','$bdate','$bplace','$age','$address','$gender','$joined')";
+        $sql = "INSERT INTO residents(lastname,firstname,middlename,sex,birthdate,birthplace,civilstatus,voterstatus,address,date_registered,tmp)VALUES('$surname','$fname','$middlename','$sex','$bdate','$bplace','$cstatus','$vstatus','$address','$tmp')";
         $results = mysqli_query($mysqli,$sql);
 // if(in_array($fileActualExt, $allowed)){
 // if($fileError === 0){
@@ -108,8 +109,8 @@ $menu = 'add_residents';
     $file = $folderPath . $fileName;
     file_put_contents($file, $image_base64);
   
-    print_r($fileName);
-  
+    //print_r($fileName);
+
 
 
 
@@ -171,9 +172,9 @@ $menu = 'add_residents';
 <div class="row form-group">
   <div class="col-lg-4">
     <label>Sex</label>
-    <select class="form-control" name="gender">
-      <option>F</option>
-      <option>M</option>      
+    <select class="form-control" name="sex">
+      <option>M</option>
+      <option>F</option>      
     </select>
   </div>
   <div class="col-lg-4">
