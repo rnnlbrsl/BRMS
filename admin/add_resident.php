@@ -59,7 +59,6 @@ $menu = 'add_residents';
         $fname = mysqli_real_escape_string($mysqli,$_POST['firstname']);
         $middlename = mysqli_real_escape_string($mysqli,$_POST['middlename']);
         $sex = mysqli_real_escape_string($mysqli,$_POST['sex']);
-
         $bdate = mysqli_real_escape_string($mysqli,$_POST['bdate']);
         $bplace = mysqli_real_escape_string($mysqli,$_POST['birthplace']);
         $cstatus = mysqli_real_escape_string($mysqli,$_POST['civilstatus']); 
@@ -81,19 +80,19 @@ $menu = 'add_residents';
         // $allowed = array('jpg','jpeg','png');
 
         $sql = "INSERT INTO residents(lastname,firstname,middlename,sex,birthdate,birthplace,civilstatus,voterstatus,address,date_registered,tmp)VALUES('$surname','$fname','$middlename','$sex','$bdate','$bplace','$cstatus','$vstatus','$address','$tmp')";
-        $results = mysqli_query($mysqli,$sql);
-// if(in_array($fileActualExt, $allowed)){
-// if($fileError === 0){
-// if($fileSize < 1000000){
-// $fileNameNew = "user".$tmp.".".$fileActualExt;
-// $fileDestination ='assets/image/uploads/'.$fileNameNew;
-// move_uploaded_file($fileTmpName, $fileDestination);
-// $sqli = "INSERT INTO picture(name,tmp)VALUES('$fileNameNew','$tmp')";
-// mysqli_query($mysqli,$sqli);
-//header('Location:acc.php');
-// }
-//     }
-//         }
+        
+        // if(in_array($fileActualExt, $allowed)){
+        // if($fileError === 0){
+        // if($fileSize < 1000000){
+        // $fileNameNew = "user".$tmp.".".$fileActualExt;
+        // $fileDestination ='assets/image/uploads/'.$fileNameNew;
+        // move_uploaded_file($fileTmpName, $fileDestination);
+        // $sqli = "INSERT INTO picture(name,tmp)VALUES('$fileNameNew','$tmp')";
+        // mysqli_query($mysqli,$sqli);
+        //header('Location:acc.php');
+        // }
+        //     }
+        //         }
 
 
     $img = $_POST['image'];
@@ -111,6 +110,7 @@ $menu = 'add_residents';
   
     //print_r($fileName);
 
+    $results = mysqli_query($mysqli,$sql);
 
 
 
