@@ -1,5 +1,5 @@
 <?php 
-require_once('includes/session.php');
+require_once('includes/session.php'); 
 require_once('includes/conn.php');
 
 /*if (isset($_SESSION["usertype"])) 
