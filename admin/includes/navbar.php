@@ -23,11 +23,11 @@ endif ?>
                 Resident Information<span class="glyphicon glyphicon-menu-right pull-right"></span>
             </a>
             <ul class="resident-menu">
-                <li class="<?php echo ($menu == 'all_residents') ? 'active' : '' ?>">
-                    <a href="all_residents.php">All Residents</a>
-                </li>
                 <li class="<?php echo ($menu == 'add_residents') ? 'active' : '' ?>">
                     <a href="add_resident.php">Add Resident</a>
+                </li>
+                <li class="<?php echo ($menu == 'all_residents') ? 'active' : '' ?>">
+                    <a href="all_residents.php">All Residents</a>
                 </li>
             </ul>
         </li>

@@ -58,7 +58,7 @@ $menu = 'add_ordinances';
             $results = mysqli_query($mysqli,$sql);
             if($results==1)
             { ?>
-                <div class="alert alert-success strover animated bounce" id="sams1">
+                <div class="alert alert-success animated bounce" id="sams1">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
                     <strong> Successfully! </strong><?php echo'created an ordinance';?>
                 </div>

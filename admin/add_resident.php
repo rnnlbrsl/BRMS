@@ -6,6 +6,33 @@ if (isset($_SESSION["usertype"])) {
         header("Location:../access-denied.php");
     }
 }
+if (isset($mysqli, $_POST['submit'])) {
+	$surname        = mysqli_real_escape_string($mysqli, $_POST['lastname']);
+	$fname          = mysqli_real_escape_string($mysqli, $_POST['firstname']);
+	$middlename     = mysqli_real_escape_string($mysqli, $_POST['middlename']);
+	$sex            = mysqli_real_escape_string($mysqli, $_POST['sex']);
+	$bdate          = mysqli_real_escape_string($mysqli, $_POST['bdate']);
+	$bplace         = mysqli_real_escape_string($mysqli, $_POST['birthplace']);
+	$cstatus        = mysqli_real_escape_string($mysqli, $_POST['civilstatus']);
+	$vstatus        = mysqli_real_escape_string($mysqli, $_POST['voterstatus']);
+	$address        = mysqli_real_escape_string($mysqli, $_POST['address']);
+	$today			= date('Y-m-d');
+	$tmp            = rand(1, 9999);
+	$sql            = "INSERT INTO residents
+						(lastname,firstname,middlename,sex,birthdate,birthplace,civilstatus,voterstatus,address,date_registered,tmp)
+						VALUES('$surname','$fname','$middlename','$sex','$bdate','$bplace','$cstatus','$vstatus','$address','$today','$tmp')";
+	$img            = $_POST['image'];
+	$folderPath     = "assets/image/uploads/";
+	$image_parts    = explode(";base64,", $img);
+	$image_type_aux = explode("image/", $image_parts[0]);
+	$image_type     = $image_type_aux[1];
+	$image_base64   = base64_decode($image_parts[1]);
+	$fileName       = uniqid() . '.png';
+	$file           = $folderPath . $fileName;
+	file_put_contents($file, $image_base64);
+
+	$results = mysqli_query($mysqli, $sql);
+}
 $page = 'residents';
 $menu = 'add_residents';
 ?>
@@ -61,43 +88,18 @@ $menu = 'add_residents';
       				</div>
     			</nav>
     			<div class="line"></div>
-    			<?php if (isset($mysqli, $_POST['submit'])): ?>
-    			<?
-				    $surname        = mysqli_real_escape_string($mysqli, $_POST['lastname']);
-				    $fname          = mysqli_real_escape_string($mysqli, $_POST['firstname']);
-				    $middlename     = mysqli_real_escape_string($mysqli, $_POST['middlename']);
-				    $sex            = mysqli_real_escape_string($mysqli, $_POST['sex']);
-				    $bdate          = mysqli_real_escape_string($mysqli, $_POST['bdate']);
-				    $bplace         = mysqli_real_escape_string($mysqli, $_POST['birthplace']);
-				    $cstatus        = mysqli_real_escape_string($mysqli, $_POST['civilstatus']);
-				    $vstatus        = mysqli_real_escape_string($mysqli, $_POST['voterstatus']);
-				    $address        = mysqli_real_escape_string($mysqli, $_POST['address']);
-				    $tmp            = rand(1, 9999);
-				    $sql            = "INSERT INTO residents(lastname,firstname,middlename,sex,birthdate,birthplace,civilstatus,voterstatus,address,date_registered,tmp)VALUES('$surname','$fname','$middlename','$sex','$bdate','$bplace','$cstatus','$vstatus','$address','$tmp')";
-				    $img            = $_POST['image'];
-				    $folderPath     = "assets/image/uploads/";
-				    $image_parts    = explode(";base64,", $img);
-				    $image_type_aux = explode("image/", $image_parts[0]);
-				    $image_type     = $image_type_aux[1];
-				    $image_base64   = base64_decode($image_parts[1]);
-				    $fileName       = uniqid() . '.png';
-				    $file           = $folderPath . $fileName;
-				    file_put_contents($file, $image_base64);
-				    $results = mysqli_query($mysqli, $sql);
-				    ?>
-				    <?php if ($results == 1): ?>
-				        <div class="alert alert-success animated bounce" id="sams1">
-			          		<a href="#" class="close" data-dismiss="alert">&times;</a>
-				          	<strong> Successful! </strong>
-							<?php echo 'Thank you for adding new resident' ?>
-						</div>
-					<?php else: ?>
-						<div class="alert alert-danger samuel animated shake" id="sams1">
-							<a href="#" class="close" data-dismiss="alert">&times;</a>
-  							<strong> Danger! </strong>
-  							<?php echo 'OOPS something went wrong' ?>
-						</div>
-					<?php endif; ?>
+				<?php if ($results == 1): ?>
+					<div class="alert alert-success animated bounce" id="sams1">
+						<a href="#" class="close" data-dismiss="alert">&times;</a>
+						<strong> Successful! </strong>
+						<?php echo 'Thank you for adding new resident' ?>
+					</div>
+				<?php elseif ($results == 2): ?>
+					<div class="alert alert-danger samuel animated shake" id="sams1">
+						<a href="#" class="close" data-dismiss="alert">&times;</a>
+						<strong> Error! </strong>
+						<?php echo 'Oops! Something went wrong' ?>
+					</div>
 				<?php endif; ?>
     			<div class="panel panel-default sammacmedia">
       				<div class="panel-heading">BRMS | Add Resident</div>
@@ -171,7 +173,7 @@ $menu = 'add_residents';
               				</div>
               				<div class="row">
                 				<div class="col-md-6">
-                  					<button type="submit" name="submit" class="btn btn-suc btn-block">
+									<button type="submit" name="submit" class="btn btn-suc btn-block">
                     					<span class="fa fa-plus">Process</span>
               						</button>
                 				</div>

@@ -78,7 +78,7 @@ if (isset($_POST['submit']))
                   
 
         <?php if (isset($_SESSION['success'])): ?>
-            <div class="alert alert-success strover animated bounce" id="sams1">
+            <div class="alert alert-success animated bounce" id="sams1">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong> Successfully! </strong><?php echo'Thank you for creating account';?>
             </div>

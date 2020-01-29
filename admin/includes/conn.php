@@ -1,3 +1,3 @@
 <?php
-$mysqli = new mysqli('localhost','root','','db-brms');
+$mysqli = new mysqli('localhost','root','root','db-brms');
 ?>

@@ -3,6 +3,11 @@
 <head>
 	<title></title>
       <style type="text/css">
+            @page 
+            {
+                  size:  auto;   /* auto is the initial value */
+                  margin: 0mm;  /* this affects the margin in the printer settings */
+            }
             #lh{
                   line-height: 2px;
             }
@@ -25,6 +30,7 @@
             $lastname = $_POST['lastname'];
             $bdate = $_POST['bdate'];
             $zone = $_POST['zone'];
+            $civil_status = $_POST['civilstatus'];
             $purpose = $_POST['purpose'];
             $datetime = $_POST['date_issued'];
             $age = (date('Y') - date('Y',strtotime($bdate)));
@@ -52,9 +58,9 @@
             <br>
             <p id="lh" style="margin-left: 10em;"> THIS IS TO <b> CERTIFY THAT </b> according to the available records kept in </p>
 
-            <p id="lh" style="margin-left: 5em;"> this office, <b><?php echo $firstname.' '.$middlename.' '.$lastname;?></b>, <b><?php echo $age;?></b> years old (born<?php echo ' '.$bdate;?>), single Filipino Citizen  </p>
+            <p id="lh" style="margin-left: 5em;"> this office, <b><?php echo $firstname.' '.$middlename.' '.$lastname;?></b>, <b><?php echo $age;?></b> years old (born<?php echo ' '.$bdate;?>), <?php echo $civil_status ?>, Filipino citizen  </p>
            
-            <p id="lh" style="margin-left: 5em;"> and a residentof Barangay Bued, (Zone <?php echo $zone;?>), City of Alaminos, Pangasinan, has no </p>
+            <p id="lh" style="margin-left: 5em;"> and a resident of Barangay Bued<?php if($zone){ echo ", (Zone '.$zone.')"; }?>, City of Alaminos, Pangasinan, has no </p>
             <p id="lh" style="margin-left: 5em;">  criminal nor pending case in the Barangay.</p>
              
 

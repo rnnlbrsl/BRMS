@@ -138,11 +138,11 @@
                                 $file_path = 'clearance/adult/'.$resident_id.'_clearance/'.$resident_id.'_'.$today.'_'.$random.'.xlsx';
                             }
                         ?>
-                <div class="alert alert-success strover animated bounce" id="sams1">
+                <div class="alert alert-success animated bounce" id="sams1">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
                     <strong> Successfully! </strong><?php echo'issued clearance';?>
                 </div>
-                <div class="alert alert-success strover animated bounce">
+                <div class="alert alert-success animated bounce">
                     <p style="color:#fff!important;">Click <a href="<?php echo $file_path ?>"><u>here</u></a> to download the generated file</p>
                 </div>
                 <?php } else { ?>
@@ -186,7 +186,7 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <div class="col-lg-3">
+                                <div class="col-lg-2">
                                     <label>Birth Date:</label>
                                     <input type="date" class="form-control" name="bdate" required>
                                 </div>
@@ -198,8 +198,17 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-2">
+                                    <label>Civil Status</label>
+                                    <select class="form-control" name="civilstatus">
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                        <option value="divorced">divorced</option>
+                                        <option value="widowed">Widowed</option>
+                                    </select> 
+                                </div>
+                                <div class="col-lg-2">
                                     <label>Zone</label>
-                                    <input type="text" class="form-control" name="zone" required>
+                                    <input type="text" class="form-control" name="zone">
                                 </div>
                                 <div class="col-lg-2">
                                     <label>Receipt No.</label>

@@ -139,13 +139,13 @@ elseif(isset($_POST['Update']))
             }
                 ?>
             <?php if (isset($_SESSION['success'])): ?>
-            <div class="alert alert-success strover" id="sams1">
+            <div class="alert alert-success" id="sams1">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong> Successfully! </strong><?php echo'Record Successfully deleted';?>
             </div>
             <?php endif ?>
             <?php if (isset($_SESSION['update'])): ?>
-            <div class="alert alert-success strover" id="sams1">
+            <div class="alert alert-success" id="sams1">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong> Successfully! </strong><?php echo'Record Successfully Updated';?>
             </div>

@@ -10,8 +10,14 @@
                   font-family: calibri;
             }
       </style>
+      <script type="text/javascript">
+            function printfunction()
+            {
+                  window.print();
+            }
+      </script>
 </head>
-<body>
+<body onload="printfunction()">
    <div id="printablediv">
             <?php
               $firstname = $_POST['firstname'];
@@ -19,6 +25,7 @@
               $lastname = $_POST['lastname'];
               $purpose = $_POST['purpose'];
               $ctc = $_POST['ctc'];
+              $civil_status = $_POST['civilstatus'];
               $date_issued = $_POST['date_issued'];
 
             ?>
@@ -40,13 +47,13 @@
             <br>
             <p id="lh" style="margin-left: 10em;"> THIS IS TO <span style=" color: #3399FF;"><b> CERTIFY </span></b> THAT according to the available records kept in </p>
 
-            <p id="lh" style="margin-left: 5em;"> this office, <b><?php echo $firstname.' '.$middlename.' '.$lastname;?></b> of legal age. single/married, Filipino Citizen and a resident </p>
+            <p id="lh" style="margin-left: 5em;"> this office, <b><?php echo $firstname.' '.$middlename.' '.$lastname;?></b> of legal age, <?php echo $civil_status;  ?>, Filipino Citizen and a resident </p>
            
             <p id="lh" style="margin-left: 5em;"> of Barangay Bued, City of Alaminos, Pangasinan, whose Community Tax Certificate</p>
             <p id="lh" style="margin-left: 5em;"> Number appearing below has no criminal nor pending case in the Barangay.</p>
 
             <br>
-            <p id="lh" style="margin-left: 10em;"> This is to <span style=" color: #3399FF;"> <b>CERTIFY FURTHER </b> </span> ,that the above-name individual is known to  </p>
+            <p id="lh" style="margin-left: 10em;"> This is to <span style=" color: #3399FF;"> <b>CERTIFY FURTHER</b></span>, that the above-name individual is known to  </p>
             <p id="lh" style="margin-left: 5em;"> me as a person of good moral character, law-abiding citizen and loyal </p>
             <p id="lh" style="margin-left: 5em;"> of the Republic of the Philippines.</p>
             
@@ -69,12 +76,12 @@
              <p id="lh" style="margin-left: 5em;">  CTC No.  : <?php echo $ctc;?> <span style="margin-left: 
              11em;"></span>O.R. # : _______________</p>
              <p id="lh" style="margin-left: 5em;">  Issue on : <?php echo $date_issued;?>  <span style="margin-left: 
-             7em;"></span>Clearance : _______________</p>
-             <p id="lh" style="margin-left: 5em;">  Issue at : <?php echo $date_issued;?> <span style="margin-left: 
-             7.5em;"></span>DST : _______________</p>
+             9em;"></span>Clearance : _______________</p>
+             <p id="lh" style="margin-left: 5em;">  Issue at : Barangay Bued <span style="margin-left: 
+             7.2em;"></span>DST : _______________</p>
              <p id="lh" style="margin-left: 5em;"> <span style="margin-left: 2.5em;"></span style="margin-left: 
              7em;"> <span style="margin-left: 
-             13.5em;"></span>Issued on : _______________</p>
+             15.7em;"></span>Issued on : _______________</p>
 
 
           

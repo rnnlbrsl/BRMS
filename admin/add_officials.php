@@ -90,7 +90,7 @@ $menu = 'add_officials';
 
             if($results==1)
             { ?>
-                <div class="alert alert-success strover animated bounce" id="sams1">
+                <div class="alert alert-success animated bounce" id="sams1">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
                     <strong> Successfully! </strong><?php echo'added an Official';?>
                 </div>

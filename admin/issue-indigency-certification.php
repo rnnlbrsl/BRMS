@@ -125,11 +125,11 @@
                                 $file_path = 'indigency/'.$resident_id.'_permit/'.$resident_id.'_'.$today.'_'.$random.'.xlsx';
                             }
                         ?>
-                <div class="alert alert-success strover animated bounce" id="sams1">
+                <div class="alert alert-success animated bounce" id="sams1">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
                     <strong> Successfully! </strong><?php echo'issued Certificate of Indigency';?>
                 </div>
-                <div class="alert alert-success strover animated bounce">
+                <div class="alert alert-success animated bounce">
                     <p style="color:#fff!important;">Click <a href="<?php echo $file_path ?>"><u>here</u></a> to download the generated file</p>
                 </div>
                 <?php } else { ?>
